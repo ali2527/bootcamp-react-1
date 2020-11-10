@@ -7,12 +7,16 @@ import Dinner from './Dinner'
 function App() {
  
   let [count,setCount] = useState(0);
+
+
+  let Updatecounter =() =>{
+    setCount(count = count+1);
+  }
   
 
   return (
     <div className="App">
-      <h1>value of counter is {count}</h1>
-      <Dinner item="biryani"  />
+      <Dinner item="biryani" count={count}  update={Updatecounter}/>
       <button onClick={() => setCount(count + 1)} > click</button>
      
     </div>
