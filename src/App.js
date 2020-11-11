@@ -7,17 +7,17 @@ import Dinner from './Dinner'
 function App() {
  
   let [count,setCount] = useState(0);
+  let [Ismorning,setMorning] = useState(true);
 
 
-  let Updatecounter =() =>{
-    setCount(count = count+1);
-  }
-  
+
 
   return (
-    <div className="App">
-      <Dinner item="biryani" count={count}  update={Updatecounter}/>
+    <div className={`App ${Ismorning ? 'night' : ''}`} >
+      <Dinner item="biryani" count={count}  />
       <button onClick={() => setCount(count + 1)} > click</button>
+
+      <button onClick={() => setMorning(!Ismorning)} > Switch</button>
      
     </div>
     );
