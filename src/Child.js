@@ -7,7 +7,7 @@ const Child = () => {
   console.log(countervalue)
   return (
     <div>
-      <h1>Counter </h1>
+      <h1>Counter  1</h1>
       <h1 className="counter">{countervalue[0]}</h1>
 
       <button onClick={() => countervalue[1](++countervalue[0])}>
