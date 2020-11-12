@@ -1,4 +1,21 @@
-.counter{
-    font-size: 200px!important;
-    margin: 0px;
+.box{
+    background-color: gray;
+    width: 500px;
+    margin: auto!important;
+    text-align: center;
+    padding: 50px;
+}
+.head{
+    display: inline-block;
+}
+.transctionList{
+    margin: 0;
+}
+.transctionList > li{
+    background-color: white;
+    list-style: none;
+    display: flex;
+    margin: 10px;
+    padding: 10px ;
+    justify-content: space-between;
 }
