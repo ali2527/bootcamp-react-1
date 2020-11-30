@@ -1,26 +1,21 @@
-import React ,{useContext, useState} from "react";
+import React, { useContext, useState } from "react";
 import "./Main.css";
-import {GlobalContext} from "./transContex";
-
+import { GlobalContext } from "./transContex";
 
 function Child() {
+  let { transctions, addTransction } = useContext(GlobalContext);
+  let [amount, setAmount] = useState("");
+  let [desc, setDesc] = useState("");
 
-  let {transctions,addTransction} = useContext(GlobalContext);
-  let [amount , setAmount] = useState("");
-  let [desc , setDesc] = useState("");
-
-
-  const handelAddition = (event) =>{
+  const handelAddition = (event) => {
     event.preventDefault();
     addTransction({
       amount,
-      desc
-    })
+      desc,
+    });
     setAmount(" ");
     setDesc(" ");
-  }
-
-    
+  };
 
   return (
     <div className="box">
@@ -41,7 +36,7 @@ function Child() {
       <ul className="transctionList">
         {transctions.map((transobj, index) => {
           return (
-            <li key={index} >
+            <li key={index}>
               <span>{transobj.desc}</span>
               <span>{transobj.amount}</span>
             </li>
@@ -52,11 +47,19 @@ function Child() {
       <form onSubmit={handelAddition}>
         <label>Text</label>
         <br />
-        <input type="text" value={desc} onChange={(ev)=>setDesc(ev.target.value)}></input>
+        <input
+          type="text"
+          value={desc}
+          onChange={(ev) => setDesc(ev.target.value)}
+        ></input>
         <br />
         <label>Amount</label>
         <br />
-        <input type="number" value={amount} onChange={(ev)=>setAmount(ev.target.value)}></input>
+        <input
+          type="number"
+          value={amount}
+          onChange={(ev) => setAmount(ev.target.value)}
+        ></input>
         <br />
         <input type="submit"></input>
       </form>
