@@ -1,42 +1,32 @@
-import React,{createContext, useReducer} from "react";
+import React, { createContext, useReducer } from "react";
 import TransctionReducer from "./transReducer";
 
 const initialTransctions = [
-    { amount: 500, Desc: "cash" },
-    { amount: -50, Desc: "food" },
-    { amount: -10, Desc: "book" },
-  ];
+  { amount: 550, desc: "cash" },
+  { amount: -50, desc: "food" },
+  { amount: -10, desc: "book" },
+];
 
-  export const TransctionContex = createContext(initialTransctions);
-  
+export const GlobalContext = createContext(initialTransctions);
 
-  export const Transctionprovider = ({children}) =>  {
-    let [state,dispatch] = useReducer(TransctionReducer,initialTransctions)
-    
-    function addtransction(transobj){
-        dispatch({
-            type : "Add",
-            payload: {
-                amount: transobj.amount,
-                Desc: transobj.Desc
+export const GlobalProvider = ({ children }) => {
+  let [state, dispatch] = useReducer(TransctionReducer, initialTransctions);
 
-            }
-            
-        })
-    }
-
-    return(
-        <TransctionContex.provider value={{
-
-            transctions: state,
-            addtransction
-        }        
-        }>
-            {children}
-        </TransctionContex.provider>
-
-    )
+  function addTransction(transobj){
+    dispatch({
+      type: "ADD_TRANSCTION",
+      payload: {
+        amount: transobj.amount,
+        desc: transobj.desc
+      },
+    });
   }
-  
 
-  
+  return (
+    <GlobalContext.Provider value={{
+        transctions: state,
+        addTransction,
+      }}>
+      {children}
+      </GlobalContext.Provider>);
+}

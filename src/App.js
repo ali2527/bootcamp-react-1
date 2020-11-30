@@ -1,14 +1,14 @@
 import React from "react";
 import Child from "./Child"
 import "./App.css";
+import { GlobalProvider } from "./transContex";
 
 
 function App() {
   return (
-    <div>
+    <GlobalProvider>
       <Child/>
-
-    </div>
+      </GlobalProvider>
   );
 }
 
