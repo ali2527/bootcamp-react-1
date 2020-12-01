@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import "./Main.css";
 import { GlobalContext } from "./transContex";
 
 function Child() {
