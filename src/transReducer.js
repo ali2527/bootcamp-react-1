@@ -3,6 +3,9 @@ const TransctionReducer = (state,action) => {
         case "ADD_TRANSCTION":{
             return [action.payload , ...state]
         }
+        case "DEL_TRANSCTION":{
+            return alert(action.payload)
+        }
         default :
             return state;
         

@@ -21,11 +21,19 @@ export const GlobalProvider = ({ children }) => {
       },
     });
   }
+  function delTransction(index){
+    dispatch({
+      type: "DEL_TRANSCTION",
+      payload:index,
+    });
+  }
 
   return (
     <GlobalContext.Provider value={{
         transctions: state,
         addTransction,
+        delTransction,
+        
       }}>
       {children}
       </GlobalContext.Provider>);
