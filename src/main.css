@@ -6,7 +6,8 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .head{
-    display: inline-block;
+    font-size: 20px;
+    font-weight: 700; 
 }
 .transctionList{
     margin: 0;
@@ -20,8 +21,17 @@
     justify-content: space-between;
 }
 .infoBox{
-    
-    height: 150px;
-    border-radius: 25px;
+      
+    min-height: 100px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.heading{
+    font-family: 'Galada', cursive;
+
+}
+.balance{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left!important;
 }

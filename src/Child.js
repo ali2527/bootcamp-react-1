@@ -1,6 +1,9 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "./transContex";
 import "./Main.css";
+import  logo from './logo (2).svg';
+import  up from './up.png';
+import  down from './down.png';
 
 function Child() {
   let { transctions, addTransction } = useContext(GlobalContext);
@@ -19,22 +22,29 @@ function Child() {
 
   return (
     <div className="container box p-20  text-center ">
-      <h1 className="m-auto d-inline">Expense Tracker </h1> <br />
-      <h1 className="m-auto d-inline">
-        Balance <br /> $260.00{" "}
+      <img src={logo} width="60%"/>
+      <h1 className="heading" >Expense Tracker </h1> 
+      <h1 className="balance">
+        YOUR BALANCE <br/><span>$0.00</span> 
       </h1>
+      
+      <div className="infoBox p-15 ">
+      <div class="row">
+    <div class="col-6"><h1 className="head m-auto d-inline">
+      
+        <span className="text-success"><img src={up} /><br/>Income</span> <br /> $260.00
+      </h1></div>
+    <div class="col-6"><h1 className="head m-auto d-inline">
+    <span className="text-danger"><img src={down} /><br/>Expense</span> <br /> $260.00
+      </h1></div>
+  </div>
+     
+        
+         </div>
       <br />
-      <div className="infoBox"> </div>
+      {" "}
       <br />
-      <h1 className="head m-auto d-inline">
-        Income <br /> $260.00{" "}
-      </h1>{" "}
-      &emsp;&emsp;
-      <h1 className="head m-auto d-inline">
-        Expense <br /> $260.00{" "}
-      </h1>{" "}
-      <br />
-      <h1 className="m-auto ">History </h1> <hr />
+      <h1 className="m-auto heading ">History </h1> 
       <ul className="transctionList">
         {transctions.map((transobj, index) => {
           return (
@@ -45,7 +55,8 @@ function Child() {
           );
         })}
       </ul>
-      <h1>Add Transction </h1> <hr />
+      <br/>
+      <h1 className=" heading ">Add Transction </h1>
     
       <form onSubmit={handelAddition} className="p-15">
         <input
