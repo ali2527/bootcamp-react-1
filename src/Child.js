@@ -40,7 +40,7 @@ function Child() {
 
   return (
     <div className="container box p-20  text-center ">
-      <img src={logo} width="60%" />
+      <img src={logo} width="60%" alt="logo" />
       <h1 className="heading">Expense Tracker </h1>
       <h1 className="balance">
         YOUR BALANCE <br />
@@ -52,7 +52,7 @@ function Child() {
           <div class="col-6">
             <h1 className="head m-auto d-inline">
               <span className="text-success">
-                <img src={up} />
+                <img src={up}  alt="logo"/>
                 <br /> Income
               </span>{" "}
               <br /> ${getIncome()}.00
@@ -61,7 +61,7 @@ function Child() {
           <div class="col-6">
             <h1 className="head m-auto d-inline">
               <span className="text-danger">
-                <img src={down} />
+                <img src={down} alt="logo"/>
                 <br />
                 Expense
               </span>{" "}
