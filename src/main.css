@@ -1,6 +1,5 @@
 .box{
-    background-color: gray;
-    width: 500px;
+       width: 500px;
     margin: auto!important;
     text-align: center;
     padding: 50px;
@@ -12,10 +11,16 @@
     margin: 0;
 }
 .transctionList > li{
-    background-color: white;
     list-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;
     margin: 10px;
     padding: 10px ;
     justify-content: space-between;
+}
+.infoBox{
+    
+    height: 150px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

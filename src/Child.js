@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "./transContex";
+import "./Main.css";
 
 function Child() {
   let { transctions, addTransction } = useContext(GlobalContext);
@@ -12,26 +13,28 @@ function Child() {
       amount,
       desc,
     });
-    setAmount(" ");
-    setDesc(" ");
+    setAmount("");
+    setDesc("");
   };
 
   return (
-    <div className="box">
-      <h1>Expense Tracker </h1> <br />
-      <h1>
+    <div className="container box p-20  text-center ">
+      <h1 className="m-auto d-inline">Expense Tracker </h1> <br />
+      <h1 className="m-auto d-inline">
         Balance <br /> $260.00{" "}
-      </h1>{" "}
+      </h1>
       <br />
-      <h1 className="head">
+      <div className="infoBox"> </div>
+      <br />
+      <h1 className="head m-auto d-inline">
         Income <br /> $260.00{" "}
       </h1>{" "}
       &emsp;&emsp;
-      <h1 className="head">
+      <h1 className="head m-auto d-inline">
         Expense <br /> $260.00{" "}
       </h1>{" "}
       <br />
-      <h1>History </h1> <hr />
+      <h1 className="m-auto ">History </h1> <hr />
       <ul className="transctionList">
         {transctions.map((transobj, index) => {
           return (
@@ -43,24 +46,29 @@ function Child() {
         })}
       </ul>
       <h1>Add Transction </h1> <hr />
-      <form onSubmit={handelAddition}>
-        <label>Text</label>
-        <br />
+    
+      <form onSubmit={handelAddition} className="p-15">
         <input
-          type="text"
-          value={desc}
-          onChange={(ev) => setDesc(ev.target.value)}
-        ></input>
-        <br />
-        <label>Amount</label>
-        <br />
-        <input
-          type="number"
+          type="Number"
+          class="form-control"
           value={amount}
           onChange={(ev) => setAmount(ev.target.value)}
-        ></input>
-        <br />
-        <input type="submit"></input>
+          placeholder="Enter Income or Expence Amount"
+          required="required"
+        />
+        <br/>
+
+        <input
+          type="Text"
+          class="form-control"
+          value={desc}
+          onChange={(ev) => setDesc(ev.target.value)}
+          placeholder="Enter Description"
+          required="required"
+        />
+        <br/>
+
+        <input class="btn btn-primary btn-block" type="submit" value="Submit"></input>
       </form>
     </div>
   );
