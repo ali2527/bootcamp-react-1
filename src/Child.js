@@ -12,10 +12,10 @@ function Child() {
 
   const getIncome = () => {
     let income = 0;
-    for (var i = 0; i < transctions.length; i++)
+    for (var i = 0; i < transctions.length; i++){
       if (transctions[i].amount > 0) {
         income = income + transctions[i].amount;
-      }
+      }}
     return income;
   };
 
