@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "./transContex";
-import "./Main.css";
+import "./test.css";
 import logo from "./logo (2).svg";
 import up from "./up.png";
 import down from "./down.png";
