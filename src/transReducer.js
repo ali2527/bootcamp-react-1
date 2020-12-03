@@ -1,11 +1,10 @@
 const TransctionReducer = (state,action) => {
     switch(action.type){
         case "ADD_TRANSCTION":{
-            return [action.payload , ...state]
+            return [...state  , action.payload]
         }
-        case "DEL_TRANSCTION":{
-            return alert(action.payload)
-        }
+        case "DEL_TRANSCTION":
+            return [...state.filter(text => text.id !== action.payload)]        
         default :
             return state;
         

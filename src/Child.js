@@ -9,6 +9,7 @@ function Child() {
   let { transctions, addTransction , delTransction} = useContext(GlobalContext);
   let [amount, setAmount] = useState("");
   let [desc, setDesc] = useState("");
+  console.log(transctions)
 
   const getIncome = () => {
     let income = 0;
@@ -31,6 +32,7 @@ function Child() {
   const handelAddition = (event) => {
     event.preventDefault();
     addTransction({
+      id:transctions.length + 1,
       amount: Number(amount),
       desc,
     });
@@ -48,8 +50,8 @@ function Child() {
       </h1>
 
       <div className="infoBox p-15 ">
-        <div class="row">
-          <div class="col-6">
+        <div className="row">
+          <div className="col-6">
             <h1 className="head m-auto d-inline">
               <span className="text-success">
                 <img src={up}  alt="logo"/>
@@ -58,7 +60,7 @@ function Child() {
               <br /> ${getIncome()}.00
             </h1>
           </div>
-          <div class="col-6">
+          <div className="col-6">
             <h1 className="head m-auto d-inline">
               <span className="text-danger">
                 <img src={down} alt="logo"/>
@@ -79,7 +81,7 @@ function Child() {
             <li key={index} className={` ${transobj.amount > 0 ? "Listinc" : "Listexp"}`}>
               <span>{transobj.desc}</span>
               <span>{transobj.amount}</span>
-              <button className="btn btn-danger" onClick={() => delTransction(index)}>	&#x1F5D1; </button>
+              <button className="btn btn-danger" onClick={() => delTransction(transobj.id)}>	&#x1F5D1; </button>
             </li>
           );
         })}
@@ -90,7 +92,7 @@ function Child() {
       <form onSubmit={handelAddition} className="p-15">
         <input
           type="Number"
-          class="form-control"
+          className="form-control"
           value={amount}
           onChange={(ev) => setAmount(ev.target.value)}
           placeholder="Enter Income or Expence Amount"
@@ -100,7 +102,7 @@ function Child() {
 
         <input
           type="Text"
-          class="form-control"
+          className="form-control"
           value={desc}
           onChange={(ev) => setDesc(ev.target.value)}
           placeholder="Enter Description"
@@ -109,7 +111,7 @@ function Child() {
         <br />
 
         <input
-          class="btn btn-primary btn-block"
+          className="btn btn-primary btn-block"
           type="submit"
           value="Submit"
         ></input>
