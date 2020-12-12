@@ -4,6 +4,7 @@ import "./test.css";
 import logo from "./logo (2).svg";
 import up from "./up.png";
 import down from "./down.png";
+import { toggleDarkmode } from 'reacthalfmoon';
 
 function Child() {
   let { transctions, addTransction , delTransction} = useContext(GlobalContext);
@@ -41,7 +42,9 @@ function Child() {
   };
 
   return (
-    <div className="container box p-20  text-center ">
+    <div className="container box p-20 my-20 m-auto">
+       <button className="btn float-right " onClick={toggleDarkmode}> &#127769;</button><br/><br/>
+       <div className="text-center">
       <img src={logo} width="60%" alt="logo" />
       <h1 className="heading">Expense Tracker </h1>
       <h1 className="balance">
@@ -116,6 +119,7 @@ function Child() {
           value="Submit"
         ></input>
       </form>
+      </div>
     </div>
   );
 }

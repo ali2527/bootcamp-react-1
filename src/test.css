@@ -1,7 +1,7 @@
 .box{
        width: 500px;
-    margin: auto!important;
-    text-align: center;
+   
+
     padding: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -44,4 +44,7 @@
 .Listinc{
     color: limegreen;
 }
+.modeBtn{
+    float: right;
 
+}
