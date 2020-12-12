@@ -1,0 +1,87 @@
+body {
+  border-color: white !important;
+}
+.woocommerce-product-search button {
+  background-color: #edf5f6;
+  color: #7b9aa4;
+  padding: 10px;
+  border-radius: 0px 5px 5px 0 !important;
+  border: 1px solid #d2e7ea;
+}
+.woocommerce-product-search .search-field {
+  border-radius: 5px 0 0 5px !important;
+  border: 1px solid #d2e7ea !important;
+}
+.pp-menu-toggle {
+  border: 1px solid #d2e7ea !important;
+  padding: 12px !important;
+  background-color: #edf5f6;
+  color: #7b9aa4;
+}
+.pp-woo-menu-cart-button {
+  border: 1px solid #d2e7ea !important;
+  align-content: center;
+  background-color: #edf5f6;
+  color: #7b9aa4;
+  width: 42px;
+  height: 42px;
+  border-radius: 5px;
+}
+.elementor-button {
+  padding: 20px 40px !important;
+  border-radius: 5px !important;
+}
+.add_to_cart_button {
+  margin: 50px !important;
+}
+@media screen and (max-width: 600px) {
+  .ast-article-single {
+    width: 100% !important;
+  }
+}
+
+.wpforms-submit {
+  width: 100% !important;
+  background-color: #44c795 !important;
+  color: white !important;
+}
+.swiper-slide-bg {
+  background-attachment: scroll !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mctb-close {
+  padding: 2px 10px !important;
+}
+.search-field::placeholder {
+  color: transparent;
+}
+
+.woocommerce-product-search button {
+  text-transform: uppercase;
+  color: #9bb3bb !important;
+
+  font-family: Ubuntu !important;
+  font-size: 14px !important;
+}
+.pp-cart-counter {
+  color: black !important;
+  background-color: #d2e7ea !important;
+  right: -2em !important;
+  top: 1.5em !important;
+  font-family: Helvetica !important;
+}
+
+.single-post {
+  background-color: White !important;
+}
+.blog {
+  background-color: White !important;
+}
+.post {
+  padding: 50px !important;
+}
+.attachment-1170x650 {
+  width: 100% !important;
+}

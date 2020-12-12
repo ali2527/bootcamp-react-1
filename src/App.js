@@ -2,7 +2,7 @@ import React from "react";
 import Child from "./Child"
 import "./App.css";
 import { GlobalProvider } from "./transContex";
-import { toggleDarkmode } from 'reacthalfmoon';
+
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     
 
     <GlobalProvider>
-      <button className="btn m-10" onClick={toggleDarkmode}> &#127769;</button>
+      <button className="btn m-10" onclick="halfmoon.toggleDarkMode()"> &#127769;</button>
       <Child/>
       </GlobalProvider>
   );
